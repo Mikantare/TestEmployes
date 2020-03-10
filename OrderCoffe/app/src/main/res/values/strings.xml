@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">OrderCoffe</string>
+    <string name="warning_autorize">Заполните все поля</string>
+    <string name="greatin_text">Уважаемый %s, чего изволите?</string>
+    <string name="radio_button_tea">Чай</string>
+    <string name="radio_button_coffe">Кофе</string>
+    <string name="aditives_text">Что добавить в ваш %s</string>
+    <string name="checkbox_sugar">Сахар</string>
+    <string name="checkbox_milk">Молоко</string>
+    <string name="checkbox_lemon">Лимон</string>
+    <string name="type_of_drink_text">Выберите тип напитка</string>
+    <string name="create_order_text">Оформить заказ</string>
+    <string name="without_aditievs">Без добавок</string>
+
+    <string-array name="type_of_tea">
+        <item>Черный</item>
+        <item>Зеленый</item>
+        <item>Красный</item>
+    </string-array>
+
+    <string-array name="type_of_coffe">
+        <item>Американо</item>
+        <item>Капучино</item>
+        <item>Латте</item>
+    </string-array>
+</resources>

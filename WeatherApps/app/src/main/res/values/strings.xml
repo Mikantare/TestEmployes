@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">WeatherApps</string>
+    <string name="whats_weather">Узнать погоду</string>
+    <string name="enter_city">Введите город</string>
+    <string name="Warning_city">Укажите город</string>
+    <string name="desctiption_weather">Выбранный город: %s \nТемпература:%s  \nПогода:%s</string>
+</resources>
