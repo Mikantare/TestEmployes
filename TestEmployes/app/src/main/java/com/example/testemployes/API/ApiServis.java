@@ -2,10 +2,10 @@ package com.example.testemployes.API;
 
 import com.example.testemployes.pojo.EmployeeResponse;
 
+import io.reactivex.Observable;
 import retrofit2.http.GET;
-import rx.Observable;
 
 public interface ApiServis {
     @GET("testTask.json")
-    Observable<EmployeeResponse> getEmployees();
+    Observable <EmployeeResponse> getEmployees();
 }
