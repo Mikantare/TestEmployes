@@ -11,22 +11,22 @@ public class ApiFactory {
     private static Retrofit retrofit;
     private static final String BASE_URL = "https://sample.fitnesskit-admin.ru/schedule/get_group_lessons_v2/";
 
-    private ApiFactory () {
+    private ApiFactory() {
         retrofit = new Retrofit.Builder()
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .baseUrl(BASE_URL)
                 .build();
-
     }
+
     public static ApiFactory getInstance() {
-        if (apiFactory == null) {
-            apiFactory = new ApiFactory();
-        }
-        return apiFactory;
-    }
+       if (apiFactory == null){
+           apiFactory = new ApiFactory();
+       }
+       return apiFactory;
+   }
 
-    public ApiServis getApiServis () {
+   public ApiServis getApiServis() {
         return retrofit.create(ApiServis.class);
-    }
+   }
 }

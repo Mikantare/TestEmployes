@@ -23,6 +23,10 @@ public class LessonAdapter extends RecyclerView.Adapter<LessonAdapter.LessonView
         notifyDataSetChanged();
     }
 
+    public List<Lesson> getLessons() {
+        return lessons;
+    }
+
     @NonNull
     @Override
     public LessonViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

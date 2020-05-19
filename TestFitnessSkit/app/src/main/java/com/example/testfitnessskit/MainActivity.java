@@ -6,17 +6,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.example.testfitnessskit.API.ApiFactory;
 import com.example.testfitnessskit.API.ApiServis;
 import com.example.testfitnessskit.adapter.LessonAdapter;
 import com.example.testfitnessskit.pojo.Lesson;
-import com.example.testfitnessskit.pojo.LessonRespone;
-import com.example.testfitnessskit.pojo.TeacherV2;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.functions.Consumer;
@@ -26,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     private RecyclerView recyclerViewLessons;
     private LessonAdapter adapter;
+    private Lesson lesson;
 
 
     @Override
@@ -42,17 +39,18 @@ public class MainActivity extends AppCompatActivity {
         apiServis.getLessons()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Consumer<LessonRespone>() {
+                .subscribe(new Consumer<Lesson>() {
                     @Override
-                    public void accept(LessonRespone lessonRespone) throws Exception {
-                    adapter.setLessons(lessonRespone.getResponse());
+                    public void accept(Lesson lesson) throws Exception {
+                    Log.i("MyResult", lesson.getName());
                     }
                 }, new Consumer<Throwable>() {
                     @Override
                     public void accept(Throwable throwable) throws Exception {
-                        Log.i("throwable", throwable.getMessage());
+                    Log.i("Throwable", throwable.getMessage());
                     }
                 });
+
 
 
     }
